@@ -1,0 +1,235 @@
+@import "tailwindcss";
+
+:root {
+  --color-brand-purple: #8b5cf6;
+  --color-brand-indigo: #6366f1;
+  --color-brand-rose: #f43f5e;
+  
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
+  --animate-fade-in-up: fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite alternate;
+  --animate-float: float 6s ease-in-out infinite;
+
+  /* Dark mode default variables */
+  --background: #090d16;
+  --foreground: #f9fafb;
+  --card-bg: rgba(17, 24, 39, 0.65);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --text-muted: #9ca3af;
+  --sidebar-bg: rgba(11, 17, 30, 0.8);
+  --header-bg: rgba(9, 13, 22, 0.6);
+  --input-bg: rgba(31, 41, 55, 0.5);
+  --input-border: rgba(255, 255, 255, 0.1);
+  --sidebar-border: rgba(255, 255, 255, 0.05);
+  --bg-gradient-1: rgba(99, 102, 241, 0.15);
+  --bg-gradient-2: rgba(244, 63, 94, 0.1);
+  --bg-gradient-3: rgba(139, 92, 246, 0.12);
+  --scroll-track: rgba(3, 7, 18, 0.9);
+  --scroll-thumb: rgba(255, 255, 255, 0.1);
+  --scroll-thumb-hover: rgba(139, 92, 246, 0.4);
+}
+
+/* ─── LIGHT MODE ─── */
+:root.light, html.light {
+  --background: #f0f4ff;
+  --foreground: #0f172a;
+  --card-bg: rgba(255, 255, 255, 0.72);
+  --card-border: rgba(139, 92, 246, 0.18);
+  --text-muted: #6366f1;
+  --sidebar-bg: rgba(255, 255, 255, 0.88);
+  --header-bg: rgba(245, 243, 255, 0.82);
+  --input-bg: rgba(255, 255, 255, 0.95);
+  --input-border: rgba(139, 92, 246, 0.22);
+  --sidebar-border: rgba(139, 92, 246, 0.12);
+  --bg-gradient-1: rgba(99, 102, 241, 0.18);
+  --bg-gradient-2: rgba(244, 63, 94, 0.12);
+  --bg-gradient-3: rgba(139, 92, 246, 0.16);
+  --scroll-track: #e8e4ff;
+  --scroll-thumb: rgba(139, 92, 246, 0.3);
+  --scroll-thumb-hover: rgba(99, 102, 241, 0.6);
+}
+
+/* Light mode — richer animated body background */
+html.light body {
+  background-color: #eef2ff;
+  background-image:
+    radial-gradient(ellipse at 10% 10%, rgba(139, 92, 246, 0.22) 0px, transparent 55%),
+    radial-gradient(ellipse at 90% 5%,  rgba(244, 63, 94, 0.14)  0px, transparent 50%),
+    radial-gradient(ellipse at 50% 95%, rgba(99, 102, 241, 0.18)  0px, transparent 55%),
+    radial-gradient(ellipse at 80% 60%, rgba(251, 191, 36, 0.08)  0px, transparent 45%),
+    linear-gradient(135deg, #f5f3ff 0%, #eef2ff 40%, #fdf2f8 100%);
+  background-attachment: fixed;
+}
+
+/* Light mode sidebar — soft gradient strip */
+html.light aside {
+  background: linear-gradient(180deg,
+    rgba(245, 243, 255, 0.95) 0%,
+    rgba(238, 242, 255, 0.98) 50%,
+    rgba(253, 242, 248, 0.95) 100%) !important;
+  border-right-color: rgba(139, 92, 246, 0.15) !important;
+}
+
+/* Light mode header — frosted purple tint */
+html.light header {
+  background: rgba(245, 243, 255, 0.88) !important;
+  border-bottom-color: rgba(139, 92, 246, 0.15) !important;
+  box-shadow: 0 1px 20px rgba(99, 102, 241, 0.08);
+}
+
+/* Light mode glass panels — vivid borders + warm shadow */
+html.light .glass-panel {
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(139, 92, 246, 0.20);
+  box-shadow: 
+    0 4px 24px rgba(99, 102, 241, 0.10),
+    0 1px 4px rgba(139, 92, 246, 0.08);
+}
+
+/* Light mode glow cards — lift + purple glow on hover */
+html.light .glow-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(139, 92, 246, 0.45);
+  box-shadow: 
+    0 12px 32px -8px rgba(99, 102, 241, 0.22),
+    0 0 24px -4px rgba(139, 92, 246, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Light mode inputs — warm focus ring */
+html.light .glass-input:focus {
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow:
+    0 0 0 3px rgba(139, 92, 246, 0.15),
+    0 2px 8px rgba(99, 102, 241, 0.10);
+}
+
+/* Light mode text-muted overrides */
+html.light p, html.light span {
+  /* Slightly richer muted text in light mode — overridden where needed inline */
+}
+
+/* Light mode — animated orb blobs (decorative, pointer-events none) */
+html.light body::before {
+  content: "";
+  position: fixed;
+  top: -15%;
+  left: -10%;
+  width: 55vw;
+  height: 55vw;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: orbFloat1 18s ease-in-out infinite;
+}
+
+html.light body::after {
+  content: "";
+  position: fixed;
+  bottom: -10%;
+  right: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(244, 63, 94, 0.10) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: orbFloat2 22s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(5%, 8%) scale(1.05); }
+  66%       { transform: translate(-3%, 4%) scale(0.97); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(-6%, -5%) scale(1.08); }
+  75%       { transform: translate(4%, -2%) scale(0.95); }
+}
+
+/* ─── SHARED KEYFRAMES ─── */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-glow {
+  from { box-shadow: 0 0 15px rgba(139, 92, 246, 0.15), 0 0 30px rgba(139, 92, 246, 0.05); }
+  to   { box-shadow: 0 0 30px rgba(139, 92, 246, 0.40), 0 0 60px rgba(139, 92, 246, 0.20); }
+}
+@keyframes float {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(-10px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* ─── BASE ─── */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(at 0% 0%,   var(--bg-gradient-1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, var(--bg-gradient-2) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, var(--bg-gradient-3) 0px, transparent 50%);
+  background-attachment: fixed;
+  transition: background-color 0.4s ease, color 0.3s ease;
+}
+
+/* ─── GLASS UTILITIES ─── */
+.glass-panel {
+  background: var(--card-bg);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-input {
+  background: var(--input-bg);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--input-border);
+  color: var(--foreground);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-input:focus {
+  background: var(--input-bg);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+  outline: none;
+}
+
+.glow-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+}
+
+.glow-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 
+    0 10px 30px -10px rgba(0, 0, 0, 0.5),
+    0 0 20px -5px rgba(139, 92, 246, 0.2);
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track  { background: var(--scroll-track); }
+::-webkit-scrollbar-thumb  { background: var(--scroll-thumb); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--scroll-thumb-hover); }
+
+/* ─── SELECTION ─── */
+::selection {
+  background-color: rgba(139, 92, 246, 0.4);
+  color: #ffffff;
+}
