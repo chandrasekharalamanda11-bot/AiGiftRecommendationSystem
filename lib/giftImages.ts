@@ -3,7 +3,7 @@
  */
 export const PREDEFINED_GIFT_IMAGES: Record<string, string> = {
   "custom star map poster": "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=600&q=80",
-  "gourmet hot sauce making kit": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=600&q=80",
+  "gourmet hot sauce making kit": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&q=80",
   "retro handheld game console": "https://images.unsplash.com/photo-1531525645387-7f14be1bdbbd?auto=format&fit=crop&w=600&q=80",
   "aromatherapy essential oil diffuser & humidifier": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80",
   "double camping hammock with tree straps": "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=600&q=80",
@@ -17,8 +17,8 @@ export const PREDEFINED_GIFT_IMAGES: Record<string, string> = {
   "dji mini 2 se drone": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=600&q=80",
   "custom portrait painting from photo": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=600&q=80",
   "aeropress premium coffee maker set": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80",
-  "diy slime & science lab kit": "https://images.unsplash.com/photo-1530210120021-ec1bb71144cd?auto=format&fit=crop&w=600&q=80",
-  "lego creator 3-in-1 animal set": "https://images.unsplash.com/photo-1585366119957-e57b93602f77?auto=format&fit=crop&w=600&q=80",
+  "diy slime & science lab kit": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80",
+  "lego creator 3-in-1 animal set": "https://images.unsplash.com/photo-1472457897821-70d3819a0e24?auto=format&fit=crop&w=600&q=80",
   "stem robotics & coding kit": "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?auto=format&fit=crop&w=600&q=80",
   "kids tabletop paint & drawing easel": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80",
   "kids instant print digital camera": "https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?auto=format&fit=crop&w=600&q=80",
@@ -45,7 +45,7 @@ export const PREDEFINED_GIFT_IMAGES: Record<string, string> = {
  */
 export const KEYWORD_GIFT_IMAGES = [
   { keywords: ["star map", "constellation", "galaxy", "astronomy"], url: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=600&q=80" },
-  { keywords: ["hot sauce", "spice", "chili", "sauce"], url: "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=600&q=80" },
+  { keywords: ["hot sauce", "spice", "chili", "sauce"], url: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&q=80" },
   { keywords: ["console", "gameboy", "nintendo", "switch", "gaming", "controller"], url: "https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=600&q=80" },
   { keywords: ["diffuser", "essential oil", "humidifier", "aromatherapy"], url: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80" },
   { keywords: ["hammock", "camping", "hiking", "backpack"], url: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=600&q=80" },
@@ -59,8 +59,8 @@ export const KEYWORD_GIFT_IMAGES = [
   { keywords: ["drone", "quadcopter", "uav", "dji"], url: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=600&q=80" },
   { keywords: ["portrait", "painting", "custom art", "canvas"], url: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=600&q=80" },
   { keywords: ["coffee", "aeropress", "espresso", "french press", "brewer", "mug"], url: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" },
-  { keywords: ["slime", "experiment", "science", "chemistry", "lab"], url: "https://images.unsplash.com/photo-1530210120021-ec1bb71144cd?auto=format&fit=crop&w=600&q=80" },
-  { keywords: ["lego", "blocks", "construction toy", "bricks"], url: "https://images.unsplash.com/photo-1585366119957-e57b93602f77?auto=format&fit=crop&w=600&q=80" },
+  { keywords: ["slime", "experiment", "science", "chemistry", "lab"], url: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80" },
+  { keywords: ["lego", "blocks", "construction toy", "bricks"], url: "https://images.unsplash.com/photo-1472457897821-70d3819a0e24?auto=format&fit=crop&w=600&q=80" },
   { keywords: ["robot", "coding", "robotics", "stem", "arduino"], url: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?auto=format&fit=crop&w=600&q=80" },
   { keywords: ["easel", "drawing", "painting kit", "canvas", "sketching", "brushes"], url: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" },
   { keywords: ["camera", "photo", "instant print", "fujifilm", "polaroid"], url: "https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?auto=format&fit=crop&w=600&q=80" },
