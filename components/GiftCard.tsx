@@ -16,6 +16,7 @@ import {
   Heart
 } from "lucide-react";
 import { getGoogleSearchUrl } from "@/lib/utils";
+import { resolveGiftImage } from "@/lib/giftImages";
 
 interface GiftRecommendation {
   id?: string;
@@ -194,17 +195,14 @@ export default function GiftCard({
       <div className="absolute inset-0 bg-gradient-to-br from-violet-600/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
       
       <div>
-        {/* Gift Image Placeholder */}
-        <div className={`relative w-full h-40 rounded-xl mb-4 overflow-hidden bg-gradient-to-b ${gradient} flex items-center justify-center border border-[var(--card-border)]`}>
-          {svgPattern}
-          <div className="z-10 flex flex-col items-center gap-2">
-            <div className={`p-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 shadow-lg text-[var(--foreground)]`}>
-              <CategoryIcon size={24} />
-            </div>
-            <span className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">
-              {category || "Gift Curation"}
-            </span>
-          </div>
+        {/* Gift Image */}
+        <div className="relative w-full h-40 rounded-xl mb-4 overflow-hidden border border-[var(--card-border)] bg-[var(--input-bg)]">
+          <img 
+            src={resolveGiftImage(name, category)} 
+            alt={name} 
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
         </div>
 
         {/* Match score & category tag row */}

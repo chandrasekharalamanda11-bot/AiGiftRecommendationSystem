@@ -17,6 +17,7 @@ import {
   BookOpen
 } from "lucide-react";
 import { getGoogleSearchUrl } from "@/lib/utils";
+import { resolveGiftImage } from "@/lib/giftImages";
 
 // Helper to resolve appropriate icon & color based on category string
 const getCategoryDetails = (category = "") => {
@@ -102,6 +103,16 @@ export default function GiftCard({ recommendation, index }) {
       <div className="absolute inset-0 bg-gradient-to-br from-violet-600/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
       
       <div>
+        {/* Gift Image */}
+        <div className="relative w-full h-40 rounded-xl mb-4 overflow-hidden border border-white/5 bg-gray-900/50">
+          <img 
+            src={resolveGiftImage(name, category)} 
+            alt={name} 
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+        </div>
+
         {/* Top Header Grid */}
         <div className="flex items-start justify-between gap-4 mb-4">
           <div className="flex items-center gap-3">
