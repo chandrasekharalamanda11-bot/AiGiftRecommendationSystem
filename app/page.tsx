@@ -243,7 +243,7 @@ export default function Home() {
         setSignInModalOpen(false);
         setAuthPassword("");
         setSignInData({ name: "", email: "", subscription: "Gift Curator Pro" });
-        addNotification("Account created", `Welcome to Wrappr.AI, ${signInData.name}!`);
+        addNotification("Account created", `Welcome to Paper Plane, ${signInData.name}!`);
       } catch (err: any) {
         setAuthError(err.message || "Failed to register account.");
       } finally {
@@ -958,7 +958,7 @@ export default function Home() {
             </div>
             <div className="text-center space-y-2">
               <h3 className="font-black text-2xl tracking-tight text-[var(--foreground)]">
-                Wrappr<span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-rose-400">.AI</span>
+                Paper<span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-rose-400"> Plane</span>
               </h3>
               <p className="text-xs text-[var(--text-muted)] font-semibold tracking-widest uppercase animate-pulse">
                 Initializing Curation Hub
@@ -1013,7 +1013,7 @@ export default function Home() {
                 <div className="absolute top-0 right-0 w-64 h-64 bg-violet-500/10 rounded-full blur-3xl" />
                 <div className="max-w-2xl space-y-3 relative z-10">
                   <span className="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-widest text-violet-500 bg-violet-500/10 border border-violet-500/20 uppercase">
-                    Wrappr Curation Hub
+                    Paper Plane Curation Hub
                   </span>
                   <h2 className="text-2xl md:text-4xl font-extrabold text-[var(--foreground)] tracking-tight leading-tight">
                     Find the Perfect Gift, <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 via-indigo-500 to-rose-500">Every Single Time.</span>
@@ -1283,7 +1283,7 @@ export default function Home() {
 
         {/* Global sticky footer info bar */}
         <footer className="py-4 px-6 border-t border-[var(--sidebar-border)] bg-black/5 text-center text-[10px] text-[var(--text-muted)] flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p>&copy; {new Date().getFullYear()} Wrappr.AI Curation Hub. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Paper Plane Curation Hub. All rights reserved.</p>
           <p className="flex items-center gap-1">
             Made with ❤️ for thoughtful givers.
           </p>
@@ -1298,7 +1298,7 @@ export default function Home() {
             <div className="bg-gradient-to-r from-violet-600/20 to-rose-600/20 border-b border-[var(--card-border)] px-6 pt-4 flex flex-col gap-2">
               <div className="flex items-center justify-between">
                 <h2 className="text-lg font-bold text-[var(--foreground)]">
-                  {signInTab === "signin" ? "Sign In to Wrappr.AI" : "Create Curator Account"}
+                  {signInTab === "signin" ? "Sign In to Paper Plane" : "Create Curator Account"}
                 </h2>
                 <button
                   onClick={() => {

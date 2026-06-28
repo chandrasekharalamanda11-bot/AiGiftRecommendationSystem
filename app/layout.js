@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Wrappr AI - Smart Gift Recommendation Assistant",
+  title: "Paper Plane - Smart Gift Recommendation Assistant",
   description: "Generate highly personalized, unique, and thoughtful gift recommendations for any occasion using AI.",
 };
 

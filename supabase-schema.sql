@@ -1,4 +1,4 @@
--- Supabase Database Schema for Wrappr.AI
+-- Supabase Database Schema for Paper Plane
 -- Copy and paste this script in your Supabase project's SQL Editor and click "Run".
 
 -- 1. Create user_profiles table

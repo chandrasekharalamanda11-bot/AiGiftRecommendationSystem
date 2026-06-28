@@ -209,7 +209,7 @@ export default function Sidebar({
               <Gift size={16} />
             </div>
             <span className="font-black text-lg tracking-tight text-[var(--foreground)]">
-              Wrappr<span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-rose-400">.AI</span>
+              Paper<span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-rose-400"> Plane</span>
             </span>
           </div>
           {/* Close button on mobile */}
